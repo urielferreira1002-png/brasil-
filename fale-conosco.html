@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco | Brasil Export Cars</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="logo-container">
+            <span class="logo-text">BRASIL EXPORT CARS</span>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="index.html#servicos">SERVIÇOS</a> 
+            <a href="estoque.html">ESTOQUE</a> 
+            <a href="fale-conosco.html" class="active-link">CONTATO</a>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-header">
+            <h2 class="section-title">Fale Conosco</h2>
+            <p>Estamos prontos para atender suas demandas de exportação e venda de veículos premium.</p>
+        </section>
+
+        <div class="contact-grid">
+            
+            <section class="contact-form-section">
+                <h3>Envie sua Mensagem ou Cotação</h3>
+                <form action="#" method="POST" class="contact-form">
+                    
+                    <input type="text" name="nome" placeholder="Seu Nome/Empresa" required>
+                    <input type="email" name="email" placeholder="E-mail para Contato" required>
+                    <input type="tel" name="telefone" placeholder="Telefone/WhatsApp" required>
+                    
+                    <select name="assunto" required>
+                        <option value="">Selecione o Assunto</option>
+                        <option value="exportacao">Cotação de Exportação (Veículo Específico)</option>
+                        <option value="compra">Compra de Veículo (Brasil)</option>
+                        <option value="avaliacao">Avaliação de Veículo para Venda/Consignação</option>
+                        <option value="geral">Dúvidas Gerais</option>
+                    </select>
+
+                    <textarea name="mensagem" placeholder="Descreva sua solicitação, o veículo de interesse e o destino da exportação (se aplicável)." required></textarea>
+                    
+                    <button type="submit" class="cta-button">ENVIAR SOLICITAÇÃO</button>
+                    <p class="form-disclaimer">Garantimos resposta em até 24 horas úteis.</p>
+                </form>
+            </section>
+            
+            <section class="contact-info">
+                <h3>Informações da Empresa</h3>
+                
+                <div class="info-item">
+                    <h4><i class="icon-phone"></i> Telefone / WhatsApp</h4>
+                    <p>+55 (XX) 9XXXX-XXXX (Vendas e Exportação)</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4><i class="icon-email"></i> E-mail Oficial</h4>
+                    <p>contato@brasilexportcars.com</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4><i class="icon-cnpj"></i> Dados da Empresa</h4>
+                    <p>Brasil Export Cars S.A.</p>
+                    <p>CNPJ: XX.XXX.XXX/0001-XX</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4><i class="icon-location"></i> Localização (Apenas com Hora Marcada)</h4>
+                    <p>Av. Premium, 1234 - Bairro Industrial - [Sua Cidade/Estado]</p>
+                </div>
+            </section>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        </footer>
+
+</body>
+</html>
