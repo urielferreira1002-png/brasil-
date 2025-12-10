@@ -888,7 +888,7 @@ nav a.active-link::after {
     padding: 0 5%;
     
     /* A NOVA IMAGEM DO LOTUS OMEGA */
-    background-image: url('/omega.jpg');
+    background-image: url('omega.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1277,3 +1277,4 @@ footer {
     .filter-bar select {
         width: 100%;
     }
+
