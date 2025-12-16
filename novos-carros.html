@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novos Carros | Brasil Export Cars - Lançamentos</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span class="logo-text">BRASIL EXPORT CARS</span>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="index.html#servicos">SERVIÇOS</a> 
+            <a href="estoque.html">ESTOQUE</a> 
+            <a href="novos-carros.html" class="active-link">NOVIDADES</a>
+            <a href="fale-conosco.html">CONTATO</a>  
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <main>
+        
+        <section id="novidades" class="inventario-section">
+            <h2 class="section-title">✨ Novidades e Lançamentos Premium</h2>
+            <p class="section-subtitle">Conheça os veículos recém-chegados ao nosso estoque e os últimos lançamentos do mercado de luxo e performance.</p>
+            
+             <div class="filter-controls">
+                <button class="filter-button active" data-filter="all">TODOS OS NOVOS CARROS</button>
+                <button class="filter-button" data-filter="lexus">LEXUS</button>
+                <button class="filter-button" data-filter="toyota">TOYOTA</button>
+                <button class="filter-button" data-filter="nissan">NISSAN</button>
+                <button class="filter-button" data-filter="alfa-romeo">ALFA ROMEO</button>
+                <button class="filter-button" data-filter="bmw">BMW</button>
+                <button class="filter-button" data-filter="cadillac">CADILLAC</button>
+            </div>
+            
+            <div class="veiculos-grid">
+                
+                <h3 class="brand-title" data-brand="lexus">LEXUS</h3>
+                
+                <div class="car-card" data-brand="lexus" data-model="Lexus LFA">
+                    <div class="card-image" style="background-image: url('lexus-lfa.jpg');"></div>
+                    <div class="card-content"> 
+                        <h4>Lexus LFA (2012)</h4>
+                        <p class="car-details">Superesportivo V10 aspirado de 560 cv, fibra de carbono. Apenas 500 unidades produzidas. **PEÇA DE COLECIONADOR**</p>
+                        <span class="car-price">R$ 10.500.000</span>
+                        <a href="fale-conosco.html" class="btn-card">FALE CONOSCO</a>
+                    </div>
+                </div>
+
+                <h3 class="brand-title" data-brand="toyota">TOYOTA</h3>
+                
+                <div class="car-card" data-brand="toyota" data-model="Toyota Supra GR">
+                    <div class="card-image" style="background-image: url('toyota-supra-gr.jpg');"></div>
+                    <div class="card-content"> 
+                        <h4>Toyota Supra GR (2024)</h4>
+                        <p class="car-details">Motor 3.0L turbo de 387 cv. Tração traseira e câmbio manual disponível. **ZERO KM**</p>
+                        <span class="car-price">R$ 1.780.000</span>
+                        <a href="fale-conosco.html" class="btn-card">FALE CONOSCO</a>
+                    </div>
+                </div>
+
+                <h3 class="brand-title" data-brand="nissan">NISSAN</h3>
+                
+                <div class="car-card" data-brand="nissan" data-model="Nissan Skyline GT-R R34">
+                    <div class="card-image" style="background-image: url('nissan-gtr-r34.jpg');"></div>
+                    <div class="card-content"> 
+                        <h4>Nissan Skyline GT-R R34 (1999)</h4>
+                        <p class="car-details">O "Godzilla" com motor RB26DETT. Totalmente revisado, baixa quilometragem. **IMPORTAÇÃO EXCLUSIVA**</p>
+                        <span class="car-price">R$ 1.900.000</span>
+                        <a href="fale-conosco.html" class="btn-card">FALE CONOSCO</a>
+                    </div>
+                </div>
+
+                <h3 class="brand-title" data-brand="alfa-romeo">ALFA ROMEO</h3>
+                
+                <div class="car-card" data-brand="alfa-romeo" data-model="Alfa Romeo Giulia Quadrifoglio">
+                    <div class="card-image" style="background-image: url('alfa-giulia-quadrifoglio.jpg');"></div>
+                    <div class="card-content"> 
+                        <h4>Alfa Romeo Giulia Quadrifoglio (2023)</h4>
+                        <p class="car-details">V6 Bi-turbo de 510 cv, DNA italiano. Versão mais potente e exclusiva. **PRONTA ENTREGA**</p>
+                        <span class="car-price">R$ 950.000</span>
+                        <a href="fale-conosco.html" class="btn-card">FALE CONOSCO</a>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Brasil Export Cars. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const carCards = document.querySelectorAll('.car-card');
+
+            carCards.forEach(card => card.style.display = 'block');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    carCards.forEach(card => {
+                        const cardBrand = card.getAttribute('data-brand');
+                        
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else if (cardBrand === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    const brandTitles = document.querySelectorAll('.brand-title');
+                    brandTitles.forEach(title => {
+                        const brand = title.getAttribute('data-brand');
+                        let hasVisibleCar = false;
+                        
+                        carCards.forEach(card => {
+                            if (card.getAttribute('data-brand') === brand && card.style.display === 'block') {
+                                hasVisibleCar = true;
+                            }
+                        });
+
+                        if (hasVisibleCar || filterValue === 'all') {
+                            title.style.display = 'block';
+                        } else {
+                            title.style.display = 'none';
+                        }
+                    });
+
+                });
+            });
+        });
+    </script>
+    </body>
+</html>
