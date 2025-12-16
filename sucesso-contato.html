@@ -6,6 +6,101 @@
     <title>Mensagem Enviada! | Brasil Export Cars</title>
     <link rel="stylesheet" href="styles.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos base do seu site (assumindo fundo escuro e texto claro) */
+        body {
+            background-color: #1a1a1a; /* Escuro */
+            color: #f0f0f0; /* Claro */
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Melhorias para a seção de Sucesso */
+        .success-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; /* Ocupa a maior parte da tela */
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .success-container {
+            max-width: 700px;
+            padding: 40px;
+            background-color: #222222; /* Fundo levemente mais claro para destaque */
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-top: 5px solid #a38d58; /* Linha de destaque na cor do CTA */
+        }
+
+        .success-title {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #a38d58; /* Cor dourada/bronze para o título principal */
+            margin-bottom: 10px;
+        }
+
+        .success-subtitle {
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: #cccccc;
+        }
+
+        .success-details p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: #dddddd;
+        }
+        
+        /* Estilo dos botões */
+        .success-actions {
+            display: flex;
+            flex-direction: column; /* Pilha em telas pequenas */
+            gap: 15px;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            /* Cor primária: a cor do seu botão 'ENVIAR SOLICITAÇÃO' */
+            background-color: #a38d58; 
+            color: #1a1a1a; 
+        }
+
+        .cta-button:hover {
+            background-color: #d4c097;
+        }
+
+        .link-secondary {
+            color: #999999;
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .link-secondary:hover {
+            color: #f0f0f0;
+        }
+        
+        /* Media Query para telas maiores */
+        @media (min-width: 600px) {
+            .success-actions {
+                flex-direction: row; /* Lado a lado em telas maiores */
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -23,19 +118,20 @@
     </header>
 
     <main class="success-main">
-        <section class="success-message">
-            <h1 class="success-title">🎉 Sucesso! Sua Mensagem Foi Recebida.</h1>
-            <p class="success-subtitle">Agradecemos seu contato. Sua proposta foi enviada à equipe de **Exportação Premium**.</p>
+        <section class="success-message success-container">
+            
+            <h1 class="success-title">🎉 Sucesso! Mensagem Enviada.</h1>
+            <p class="success-subtitle">Agradecemos seu interesse. Sua proposta foi enviada à equipe **Exportação Premium**.</p>
             
             <div class="success-details">
-                <p>Nossa equipe revisará os detalhes do seu interesse e responderá por e-mail ou WhatsApp em **até 24 horas úteis**.</p>
-                <p>Para mais informações ou atendimento imediato, entre em contato via nosso WhatsApp.</p>
+                <p>Nossa equipe revisará os detalhes do seu pedido e responderá por e-mail ou WhatsApp em **até 24 horas úteis**.</p>
+                <p>Para dúvidas urgentes ou atendimento imediato sobre veículos específicos, use nosso canal direto:</p>
             </div>
             
             <div class="success-actions">
-                <a href="estoque.html" class="cta-button">CONTINUAR VENDO O ESTOQUE</a>
+                <a href="estoque.html" class="cta-button">VER VEÍCULOS EM ESTOQUE</a>
                 
-                <a href="fale-conosco.html" class="link-home">Detalhes de Contato</a>
+                <a href="fale-conosco.html" class="link-secondary">Detalhes de Contato / WhatsApp</a>
             </div>
 
         </section>
