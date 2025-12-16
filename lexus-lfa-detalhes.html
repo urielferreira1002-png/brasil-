@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <style>
+        /* Estilos base (mantidos) */
         .car-detail-main {
             padding: 40px 20px;
             background-color: #1a1a1a;
@@ -38,19 +39,36 @@
             gap: 15px;
             margin-bottom: 40px;
         }
-
-        .main-image, .thumb-image {
+        
+        /* NOVO ESTILO: Container responsivo para o vídeo (16:9) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relação 16:9 */
+            height: 0;
+            overflow: hidden;
+            grid-column: 1 / -1; /* Ocupa a largura total da galeria */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* O estilo .main-image foi removido/modificado, 
+           mas o .thumb-image é mantido */
+        .thumb-image {
             width: 100%;
             height: 350px;
             background-size: cover;
             background-position: center;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .main-image {
-            grid-column: 1 / -1; /* Ocupa a largura total */
-            height: 500px;
         }
 
         .specs-section {
@@ -83,7 +101,7 @@
             padding: 25px;
             border-radius: 8px;
             text-align: center;
-            align-self: flex-start; /* Fixa o box no topo */
+            align-self: flex-start;
         }
         
         .price-box h4 {
@@ -114,6 +132,15 @@
         .contact-cta:hover {
             background-color: #d4c097;
         }
+        
+        .link-secondary {
+             color: #ccc;
+             text-decoration: none;
+        }
+        .link-secondary:hover {
+             color: #f0f0f0;
+             text-decoration: underline;
+        }
 
         @media (max-width: 800px) {
             .specs-section {
@@ -132,8 +159,7 @@
             <a href="index.html">HOME</a>
             <a href="index.html#servicos">SERVIÇOS</a> 
             <a href="estoque.html">ESTOQUE</a> 
-            <a href="novos-carros.html">NOVIDADES</a>
-            <a href="fale-conosco.html">CONTATO</a>
+            <a href="novos-carros.html">NOVIDADES</a> <a href="fale-conosco.html">CONTATO</a>
         </nav>
         <button class="menu-toggle">☰</button>
     </header>
@@ -146,13 +172,21 @@
         </div>
         
         <div class="gallery">
-            <div class="main-image" style="background-image: url('2011_LFA.jpg');"></div>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI?autoplay=0&controls=1&mute=0" 
+                    title="Vídeo de Apresentação Lexus LFA" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
             <div class="thumb-image" style="background-image: url('interior.jpg');"></div>
             <div class="thumb-image" style="background-image: url('LFA-engine-in-bay-02.jpg');"></div>
             <div class="thumb-image" style="background-image: url('trazeira.jpg');"></div>
             <div class="thumb-image" style="background-image: url('rodas.jpg');"></div>
         </div>
-
         <div class="specs-section">
             
             <section class="car-description">
@@ -193,4 +227,3 @@
 
 </body>
 </html>
-            </section>
