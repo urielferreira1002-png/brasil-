@@ -18,7 +18,10 @@
 html {
     scroll-behavior: smooth;
 }
-
+.video-container{
+    width:100%;
+}
+iframe{width:100%;}
 body {
     font-family: var(--font-main);
     color: var(--color-text-light);
@@ -1277,4 +1280,5 @@ footer {
     .filter-bar select {
         width: 100%;
     }
+
 
