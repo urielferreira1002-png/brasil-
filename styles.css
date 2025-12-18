@@ -1330,4 +1330,31 @@ footer {
     }
 }
 
+<head>
+    ...
+    <style>
+        /* Seus estilos atuais aqui... */
 
+        /* COLE O NOVO CSS DO MENU AQUI ABAIXO */
+        @media (max-width: 800px) {
+            nav { display: none; flex-direction: column; ... }
+            nav.active { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+...
+    <footer>
+        <p>&copy; 2025 Brasil Export Cars. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
