@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilos base (mantidos) */
         .car-detail-main {
             padding: 40px 20px;
             background-color: #1a1a1a;
@@ -39,36 +38,19 @@
             gap: 15px;
             margin-bottom: 40px;
         }
-        
-        /* NOVO ESTILO: Container responsivo para o vídeo (16:9) */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Relação 16:9 */
-            height: 0;
-            overflow: hidden;
-            grid-column: 1 / -1; /* Ocupa a largura total da galeria */
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* O estilo .main-image foi removido/modificado, 
-           mas o .thumb-image é mantido */
-        .thumb-image {
+
+        .main-image, .thumb-image {
             width: 100%;
             height: 350px;
             background-size: cover;
             background-position: center;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .main-image {
+            grid-column: 1 / -1; /* Ocupa a largura total */
+            height: 500px;
         }
 
         .specs-section {
@@ -101,7 +83,7 @@
             padding: 25px;
             border-radius: 8px;
             text-align: center;
-            align-self: flex-start;
+            align-self: flex-start; /* Fixa o box no topo */
         }
         
         .price-box h4 {
@@ -132,15 +114,6 @@
         .contact-cta:hover {
             background-color: #d4c097;
         }
-        
-        .link-secondary {
-             color: #ccc;
-             text-decoration: none;
-        }
-        .link-secondary:hover {
-             color: #f0f0f0;
-             text-decoration: underline;
-        }
 
         @media (max-width: 800px) {
             .specs-section {
@@ -159,7 +132,8 @@
             <a href="index.html">HOME</a>
             <a href="index.html#servicos">SERVIÇOS</a> 
             <a href="estoque.html">ESTOQUE</a> 
-            <a href="novos-carros.html">NOVIDADES</a> <a href="fale-conosco.html">CONTATO</a>
+            <a href="novos-carros.html">NOVIDADES</a>
+            <a href="fale-conosco.html">CONTATO</a>
         </nav>
         <button class="menu-toggle">☰</button>
     </header>
@@ -172,13 +146,13 @@
         </div>
         
         <div class="gallery">
-            <div class="main-image" style="background-image: url('2011_LFA.jpg');"></div>
-            
-            <div class="thumb-image" style="background-image: url('trazeira.jpg');"></div>
-            <div class="thumb-image" style="background-image: url('interior.jpg');"></div>
-            <div class="thumb-image" style="background-image: url('LFA-engine-in-bay-02.jpg');"></div>
-            <div class="thumb-image" style="background-image: url('rodas.jpg');"></div>
+            <div class="main-image" style="background-image: url('/2011_LFA.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('/trazeira.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('/rodas.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('/interior.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('/LFA-engine-in-bay-02.jpg');"></div>
         </div>
+
         <div class="specs-section">
             
             <section class="car-description">
@@ -195,18 +169,18 @@
                     <li>Câmbio: <strong>6 velocidades ASG (Automated Sequential Gearbox)</strong></li>
                     <li>Tração: <strong>Traseira</strong></li>
                     <li>Ano: <strong>2012</strong></li>
-                    <li>Cor Externa: <strong>branco (white)</strong></li>
+                    <li>Cor Externa: <strong>Preto (Pearl Black)</strong></li>
                     <li>Interior: <strong>Couro Vermelho e Carbono</strong></li>
                 </ul>
             </section>
             
             <section class="price-box">
-                <h4>Valor do carro/importação</h4>
+                <h4>Valor do Carro/Exportação</h4>
                 <p class="current-price">R$ 10.500.000</p>
                 
-                <p>Este valor é para importação e pode variar dependendo do destino e taxas locais.</p>
+                <p>Este valor é para exportação e pode variar dependendo do destino e taxas locais.</p>
                 
-                <a href="fale-conosco.html?carro=Lexus_LFA" class="contact-cta">SOLICITAR IMPORTAÇÃO EXCLUSIVA</a>
+                <a href="fale-conosco.html?carro=Lexus_LFA" class="contact-cta">SOLICITAR COTAÇÃO EXCLUSIVA</a>
                 <a href="novos-carros.html" class="link-secondary" style="display: block; margin-top: 10px; color: #ccc;">Voltar para Novidades</a>
             </section>
         </div>
