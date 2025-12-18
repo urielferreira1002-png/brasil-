@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nissan GT-R R34 V-Spec II - Detalhes | Brasil Export Cars</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos base para manter o padrão visual */
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+
+        .car-detail-main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .car-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .car-title {
+            font-size: 3em;
+            font-weight: 900;
+            color: #a38d58;
+            margin-bottom: 5px;
+        }
+
+        .car-subtitle {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #cccccc;
+            text-transform: uppercase;
+        }
+
+        /* --- CONFIGURAÇÃO DA GALERIA (Igual ao Supra) --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .main-image {
+            grid-column: 1 / -1; 
+            height: 550px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .thumb-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* --- SEÇÃO DE ESPECIFICAÇÕES --- */
+        .specs-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .specs-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .specs-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .specs-list strong {
+            color: #a38d58;
+        }
+
+        .price-box {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            align-self: flex-start;
+            border: 1px solid #333;
+        }
+        
+        .current-price {
+            font-size: 2.2em;
+            font-weight: 900;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .contact-cta {
+            background-color: #a38d58;
+            color: #1a1a1a;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 5px;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .contact-cta:hover { background-color: #d4c097; }
+
+        .link-secondary {
+            display: inline-block;
+            margin-top: 15px;
+            color: #999;
+            text-decoration: none;
+        }
+
+        @media (max-width: 800px) {
+            .specs-section { grid-template-columns: 1fr; }
+            .gallery { grid-template-columns: 1fr; }
+            .main-image { height: 350px; }
+            .car-title { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo-container" style="padding: 15px; text-align: center;">
+            <span class="logo-text" style="color: #a38d58; font-weight: 900; font-size: 1.5em;">BRASIL EXPORT CARS</span>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="index.html#servicos">SERVIÇOS</a> 
+            <a href="novos-carros.html">NOVIDADES</a>
+            <a href="fale-conosco.html">CONTATO</a>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <main class="car-detail-main">
+        
+        <div class="car-header">
+            <p class="car-subtitle">NISSAN (GODZILLA)</p>
+            <h1 class="car-title">Nissan GT-R R34 V-Spec II</h1>
+        </div>
+        
+        <div class="gallery">
+            <div class="main-image" style="background-image: url('gtr-main.jpg');"></div>
+            
+            <div class="thumb-image" style="background-image: url('gtr-interior.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('gtr-engine.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('gtr-rear.jpg');"></div>
+        </div>
+
+        <div class="specs-section">
+            <section class="car-description">
+                <h3>Descrição do Veículo</h3>
+                <p>O Nissan Skyline GT-R R34 é o "Santo Graal" dos entusiastas JDM. A versão V-Spec II (Victory Specification) apresenta melhorias na suspensão e capô em fibra de carbono. Equipado com o motor RB26DETT e o sistema ATTESA E-TS Pro, este veículo oferece uma experiência de condução tecnológica e bruta ao mesmo tempo.</p>
+                <p><strong>Destaques:</strong> Tração integral, Motor RB26 original, Câmbio manual de 6 marchas e o icônico display multifuncional de performance.</p>
+                
+                <h3 style="margin-top: 30px;">Especificações Técnicas</h3>
+                <ul class="specs-list">
+                    <li>Motor: <strong>RB26DETT Bi-turbo</strong></li>
+                    <li>Cilindrada: <strong>2.6 Litros (L6)</strong></li>
+                    <li>Potência: <strong>280 cv (Declarados) / ~330 cv real</strong></li>
+                    <li>Sistema de Tração: <strong>ATTESA E-TS Pro (AWD)</strong></li>
+                    <li>Câmbio: <strong>Manual de 6 velocidades</strong></li>
+                    <li>Ano: <strong>2002</strong></li>
+                    <li>Cor: <strong>Bayside Blue</strong></li>
+                </ul>
+            </section>
+            
+            <section class="price-box">
+                <h4>Valor do carro/importação</h4>
+                <span class="current-price">R$ 2.900.000</span>
+                <p>Valor aproximado para importação de colecionador.</p>
+                <a href="fale-conosco.html?carro=GTR_R34" class="contact-cta">SOLICITAR CONSULTORIA</a>
+                <a href="novos-carros.html" class="link-secondary">← Voltar para Novidades</a>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p style="text-align: center; padding: 20px;">&copy; 2025 Brasil Export Cars.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
