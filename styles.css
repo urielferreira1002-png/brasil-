@@ -1280,5 +1280,54 @@ footer {
     .filter-bar select {
         width: 100%;
     }
+/* Estilos para o Menu Mobile */
+@media (max-width: 800px) {
+    header {
+        position: relative;
+    }
+
+    nav {
+        display: none; /* Esconde o menu por padrão no mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 2px solid #a38d58;
+    }
+
+    /* Quando o menu tiver a classe 'active', ele aparece */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu-toggle {
+        display: block; /* Garante que o botão apareça no mobile */
+        background: none;
+        border: none;
+        color: #f0f0f0;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+/* Esconde o botão de menu em telas grandes */
+@media (min-width: 801px) {
+    .menu-toggle {
+        display: none;
+    }
+    nav {
+        display: flex !important;
+    }
+}
 
 
