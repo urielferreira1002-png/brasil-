@@ -8,11 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* Estilos base (mantidos do modelo Lexus) */
-        .car-detail-main {
-            padding: 40px 20px;
+        /* Estilos base para manter o padrão visual */
+        body {
             background-color: #1a1a1a;
             color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+
+        .car-detail-main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .car-header {
@@ -23,7 +30,7 @@
         .car-title {
             font-size: 3em;
             font-weight: 900;
-            color: #a38d58; /* Cor de destaque */
+            color: #a38d58;
             margin-bottom: 5px;
         }
 
@@ -31,59 +38,50 @@
             font-size: 1.2em;
             font-weight: 500;
             color: #cccccc;
+            text-transform: uppercase;
         }
 
+        /* --- CONFIGURAÇÃO DA GALERIA IGUAL À CAPTURA DE TELA --- */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas para as miniaturas */
             gap: 15px;
             margin-bottom: 40px;
         }
 
-        /* Container responsivo para o vídeo (16:9) */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Relação 16:9 */
-            height: 0;
-            overflow: hidden;
-            grid-column: 1 / -1; 
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .thumb-image {
-            width: 100%;
-            height: 350px;
+        .main-image {
+            grid-column: 1 / -1; /* Ocupa todas as colunas (largura total) */
+            height: 550px;
             background-size: cover;
             background-position: center;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
+        .thumb-image {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* --- SEÇÃO DE ESPECIFICAÇÕES --- */
         .specs-section {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 40px;
-            margin-bottom: 40px;
         }
 
         .specs-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 20px 0;
         }
 
         .specs-list li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #333;
             display: flex;
             justify-content: space-between;
@@ -91,76 +89,72 @@
 
         .specs-list strong {
             color: #a38d58;
-            font-weight: 700;
         }
 
         .price-box {
             background-color: #222;
-            padding: 25px;
+            padding: 30px;
             border-radius: 8px;
             text-align: center;
             align-self: flex-start;
+            border: 1px solid #333;
         }
         
         .price-box h4 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: #a38d58;
-            margin-bottom: 10px;
+            margin-top: 0;
         }
 
         .current-price {
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: 900;
-            margin-bottom: 20px;
+            margin: 15px 0;
+            display: block;
         }
 
         .contact-cta {
             background-color: #a38d58;
             color: #1a1a1a;
-            padding: 15px 30px;
+            padding: 15px;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 700;
             border-radius: 5px;
             display: block;
-            margin-top: 15px;
-            transition: background-color 0.3s;
+            transition: 0.3s;
         }
         
         .contact-cta:hover {
             background-color: #d4c097;
         }
-        
+
         .link-secondary {
-             color: #ccc;
-             text-decoration: none;
-        }
-        .link-secondary:hover {
-             color: #f0f0f0;
-             text-decoration: underline;
+            display: inline-block;
+            margin-top: 15px;
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9em;
         }
 
+        /* Responsividade para celulares */
         @media (max-width: 800px) {
-            .specs-section {
-                grid-template-columns: 1fr;
-            }
+            .specs-section { grid-template-columns: 1fr; }
+            .gallery { grid-template-columns: 1fr; }
+            .main-image { height: 350px; }
+            .car-title { font-size: 2em; }
         }
     </style>
 </head>
 <body>
     
     <header>
-        <div class="logo-container">
-            <span class="logo-text">BRASIL EXPORT CARS</span>
-        </div>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="index.html#servicos">SERVIÇOS</a> 
-            <a href="estoque.html">ESTOQUE</a> 
-            <a href="novos-carros.html">NOVIDADES</a>
-            <a href="fale-conosco.html">CONTATO</a>
+        <nav style="padding: 20px; text-align: center; background: #000; border-bottom: 1px solid #a38d58;">
+            <a href="index.html" style="color: #a38d58; text-decoration: none; margin: 0 15px; font-weight: bold;">HOME</a>
+            <a href="index.html#servicos" style="color: #fff; text-decoration: none; margin: 0 15px;">SERVIÇOS</a> 
+            <a href="novos-carros.html" style="color: #fff; text-decoration: none; margin: 0 15px;">NOVIDADES</a>
+            <a href="fale-conosco.html" style="color: #fff; text-decoration: none; margin: 0 15px;">CONTATO</a>
         </nav>
-        <button class="menu-toggle">☰</button>
     </header>
 
     <main class="car-detail-main">
@@ -170,53 +164,45 @@
             <h1 class="car-title">Toyota Supra MK4 Turbo (1998)</h1>
         </div>
         
-
         <div class="gallery">
-            <div class="main-image" style="background-image: url('Qual-a-potencia-do-Supra-MK4.jpg');"></div>
+            <div class="main-image" style="background-image: url('supra-front.jpg');"></div>
             
-            <div class="thumb-image" style="background-image: url('Qual-a-potencia-do-Supra-MK4.jpg');"></div>
-            <div class="thumb-image" style="background-image: url('toyota-supra-mk4-1993-frente.webp');"></div>
-            <div class="thumb-image" style="background-image: url('Pode-ter-Supra-mk4-no-Brasil.jpg');"></div>
-            <div class="thumb-image" style="background-image: url('interior\ supra.avif');"></div>
-            <div class="thumb-image" style="background-image: url('toyota-supra-mk4-1993-lateral.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('supra-rear.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('supra-interior.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('supra-engine.jpg');"></div>
         </div>
-        
+
         <div class="specs-section">
-        <div class="specs-section">
-            
             <section class="car-description">
                 <h3>Descrição do Veículo</h3>
-                <p>O Toyota Supra de quarta geração (A80) é, sem dúvida, um dos esportivos japoneses mais desejados de todos os tempos. Esta unidade é a versão Turbo, equipada com o lendário motor 2JZ-GTE. Um carro que define uma era e mantém seu valor de mercado consistentemente alto devido à sua raridade e potencial de performance.</p>
-                <p><strong>Destaques:</strong> Motor 2JZ-GTE Bi-Turbo, Câmbio Manual Getrag V160, T-Top (opcional), total originalidade, quilometragem extremamente baixa para o ano. Pronta para importação e colecionismo.</p>
+                <p>O Toyota Supra de quarta geração (A80) é um dos ícones mais reverenciados da cultura automotiva japonesa. Equipado com o motor 2JZ-GTE, este exemplar representa o auge da engenharia da década de 90, unindo performance bruta e um design atemporal que continua a valorizar globalmente.</p>
+                <p><strong>Estado:</strong> Unidade mantida em especificações originais, com histórico completo de manutenção e quilometragem verificada. Perfeito para colecionadores exigentes.</p>
                 
                 <h3 style="margin-top: 30px;">Especificações Técnicas</h3>
                 <ul class="specs-list">
                     <li>Motor: <strong>2JZ-GTE Bi-turbo</strong></li>
                     <li>Cilindrada: <strong>3.0 Litros (L6)</strong></li>
-                    <li>Potência (Stock): <strong>320 cv</strong></li>
-                    <li>Torque (Stock): <strong>431 Nm</strong></li>
+                    <li>Potência: <strong>320 cv</strong></li>
+                    <li>Torque: <strong>431 Nm</strong></li>
                     <li>Câmbio: <strong>Manual de 6 velocidades (Getrag V160)</strong></li>
                     <li>Tração: <strong>Traseira</strong></li>
                     <li>Ano: <strong>1998</strong></li>
-                    <li>Cor Externa: <strong>Branco (Alpine Silver)</strong></li>
-                    <li>Interior: <strong>Couro Preto</strong></li>
+                    <li>Cor: <strong>Branco Pérola</strong></li>
                 </ul>
             </section>
             
             <section class="price-box">
-                <h4>Valor do carro/importação</h4>
-                <p class="current-price">R$ 1.500.000</p>
-                
-                <p>Este valor é para exportação e pode variar dependendo do destino e taxas locais.</p>
-                
-                <a href="fale-conosco.html?carro=Supra_MK4" class="contact-cta">SOLICITAR IMPORTAÇÃO EXCLUSIVA</a>
-                <a href="novos-carros.html" class="link-secondary" style="display: block; margin-top: 10px; color: #ccc;">Voltar para Novidades</a>
+                <h4>Cotação de Importação</h4>
+                <span class="current-price">R$ 1.500.000</span>
+                <p>Valor estimado para o veículo posto no Brasil (incluindo taxas e frete).</p>
+                <a href="fale-conosco.html?carro=Supra_MK4" class="contact-cta">INICIAR CONSULTORIA</a>
+                <a href="novos-carros.html" class="link-secondary">← Voltar para Novidades</a>
             </section>
         </div>
 
     </main>
     
-    <footer>
+    <footer style="text-align: center; padding: 40px; color: #666; font-size: 0.8em;">
         <p>&copy; 2025 Brasil Export Cars. Todos os direitos reservados.</p>
     </footer>
 
