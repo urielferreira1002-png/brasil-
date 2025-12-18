@@ -1329,32 +1329,185 @@ footer {
         display: flex !important;
     }
 }
+/* --- CONFIGURAÇÃO DO BOTÃO (DESKTOP) --- */
+.menu-toggle {
+    display: none; /* Esconde o botão em telas de computador */
+    background: none;
+    border: none;
+    color: var(--color-accent-gold); /* Usa o dourado do seu logo */
+    font-size: 2em;
+    cursor: pointer;
+    line-height: 1;
+}
 
-<head>
-    ...
-    <style>
-        /* Seus estilos atuais aqui... */
+/* --- CONFIGURAÇÃO PARA MOBILE (ABAIXO DE 850px) --- */
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block; /* O botão aparece apenas aqui */
+    }
 
-        /* COLE O NOVO CSS DO MENU AQUI ABAIXO */
-        @media (max-width: 800px) {
-            nav { display: none; flex-direction: column; ... }
-            nav.active { display: flex; }
-            .menu-toggle { display: block; }
-        }
-    </style>
-</head>
-...
-    <footer>
-        <p>&copy; 2025 Brasil Export Cars. Todos os direitos reservados.</p>
-    </footer>
+    header {
+        position: relative;
+    }
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav');
+    nav {
+        display: none; /* Esconde os links do menu por padrão no celular */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-primary-dark);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 2px solid var(--color-accent-gold);
+    }
 
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-    </script>
-</body>
-</html>
+    /* Esta classe será ativada pelo seu JavaScript para abrir o menu */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #222;
+        width: 100%;
+    }
+    
+    nav a::after {
+        display: none; /* Remove a linha de hover no mobile para ficar mais limpo */
+    }
+}/* ################# MENU MOBILE (ATUALIZADO) ################# */
+
+/* 1. Garante que o botão existe mas fica escondido no computador */
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: var(--color-accent-gold); /* Cor dourada do teu logo */
+    font-size: 2.2em;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1001;
+}
+
+/* 2. Regras para Telemóveis e Tablets (Abaixo de 850px) */
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block; /* O botão aparece apenas aqui */
+    }
+
+    header {
+        position: relative; /* Necessário para o menu abrir no sítio certo */
+    }
+
+    nav {
+        display: none; /* Esconde os links por padrão */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-primary-dark);
+        position: absolute;
+        top: 100%; /* Aparece logo abaixo do header */
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 2px solid var(--color-accent-gold);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    /* Classe que o JavaScript vai ativar ao clicar no botão */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #222;
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    /* Remove efeitos de linha que não funcionam bem no mobile */
+    nav a::after {
+        display: none !important;
+    }
+
+    /* Ajustes extras de layout para mobile */
+    .hero-section h1 { font-size: 2.5em; }
+    .veiculos-grid { grid-template-columns: 1fr; }
+    .pilares-grid { grid-template-columns: 1fr; }
+    .filter-bar { flex-direction: column; gap: 10px; }
+    .filter-bar input, .filter-bar select { width: 100%; }
+}/* ################# MENU MOBILE (VERSÃO FINAL) ################# */
+
+/* 1. Garante que o botão hambúrguer apareça corretamente no mobile */
+.menu-toggle {
+    display: none; /* Escondido por padrão no computador */
+    background: none;
+    border: none;
+    color: var(--color-accent-gold);
+    font-size: 2.2em;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1100;
+}
+
+/* 2. Regras de Responsividade (Abaixo de 850px) */
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block; /* O botão só aparece em telas pequenas */
+    }
+
+    header {
+        position: relative;
+    }
+
+    nav {
+        display: none; /* Menu escondido no início */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-primary-dark);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 2px solid var(--color-accent-gold);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    /* ESSA É A FUNÇÃO QUE O JS VAI ATIVAR */
+    nav.active {
+        display: flex; /* Mostra o menu quando clicado */
+    }
+
+    nav a {
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #222;
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    /* Ajustes extras para o layout não quebrar no celular */
+    .hero-section h1 { font-size: 2.5em; }
+    .veiculos-grid { grid-template-columns: 1fr; }
+    .pilares-grid { grid-template-columns: 1fr; }
+    .filter-bar { flex-direction: column; gap: 10px; }
+    .filter-bar input, .filter-bar select { width: 100%; }
+}
+
+/* 3. Garante que o menu volte ao normal se a tela for aumentada */
+@media (min-width: 851px) {
+    .menu-toggle {
+        display: none;
+    }
+    nav {
+        display: flex !important;
+    }
+}
