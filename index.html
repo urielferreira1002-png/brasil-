@@ -150,6 +150,24 @@
         </section>
     </main>    <p>&copy; 2025 Brasil Export Cars. Todos os direitos reservados.</p>
     </footer>
+<script>
+    // Seleciona o botão e o menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    // Quando clicar no botão, adiciona ou remove a classe 'active'
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    // Fecha o menu automaticamente ao clicar num link (opcional, mas recomendado)
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    });
+</script>
 
 
 
