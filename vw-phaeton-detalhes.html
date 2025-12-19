@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VW Phaeton W12 - Brasil Export Cars</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+
+        /* --- GALERIA COM IMAGEM PRINCIPAL GRANDE --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-image {
+            grid-column: 1 / -1; 
+            height: 550px;
+            background-image: url('phaeton-main.jpg'); /* Substitua pela sua foto */
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .thumb-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        /* --- INFO DO CARRO --- */
+        .car-info-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .car-title {
+            color: #AA8A5A; /* O Bege da sua marca */
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .specs-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specs-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .specs-list strong {
+            color: #AA8A5A;
+        }
+
+        /* --- CAIXA DE PREÇO --- */
+        .price-box {
+            background: #222;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #AA8A5A;
+            height: fit-content;
+        }
+
+        .price-tag {
+            font-size: 2.5em;
+            font-weight: 900;
+            display: block;
+            margin: 20px 0;
+        }
+
+        .btn-contato {
+            background-color: #AA8A5A;
+            color: #121212;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-contato:hover {
+            background-color: #d6c29e;
+        }
+
+        @media (max-width: 850px) {
+            .car-info-container { grid-template-columns: 1fr; }
+            .gallery { grid-template-columns: 1fr; }
+            .main-image { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span class="logo-text" style="color: #AA8A5A; font-weight: 900; font-size: 1.5em;">BRASIL EXPORT CARS</span>
+        </div>
+        <nav id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="novos-carros.html">NOVIDADES</a>
+            <a href="fale-conosco.html">CONTATO</a>
+        </nav>
+        <button class="menu-toggle" style="color: #AA8A5A; background: none; border: none; font-size: 2em;">☰</button>
+    </header>
+
+    <main>
+        <div class="gallery">
+            <div class="main-image"></div>
+            <div class="thumb-image" style="background-image: url('phaeton-int.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('phaeton-engine.jpg');"></div>
+            <div class="thumb-image" style="background-image: url('phaeton-rear.jpg');"></div>
+        </div>
+
+        <div class="car-info-container">
+            <section>
+                <h1 class="car-title">VW Phaeton W12</h1>
+                <p>O Volkswagen Phaeton foi o projeto pessoal de Ferdinand Piëch para criar o melhor sedan de luxo do mundo. Partilhando o chassis com o Bentley Continental, o Phaeton é uma obra-prima de engenharia e conforto absoluto.</p>
+                
+                <ul class="specs-list">
+                    <li>Motor: <strong>6.0L W12</strong></li>
+                    <li>Potência: <strong>450 cv</strong></li>
+                    <li>Tracção: <strong>Integral 4MOTION</strong></li>
+                    <li>Transmissão: <strong>Automática Tiptronic</strong></li>
+                    <li>Ano: <strong>2010 (Exemplar de Coleção)</strong></li>
+                    <li>Interior: <strong>Pele e Madeira Nobre</strong></li>
+                </ul>
+            </section>
+
+            <aside class="price-box">
+                <p>Valor do carro/Importação</p>
+                <span class="price-tag">R$ 580.000</span>
+                <a href="fale-conosco.html?carro=Phaeton_W12" class="btn-contato">SOLICITAR CONSULTORIA</a>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('nav-menu');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
